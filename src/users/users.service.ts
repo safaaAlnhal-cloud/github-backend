@@ -9,6 +9,7 @@ export class UsersService {
   const response = await fetch(`https://api.github.com/users/${username}`);
    
   const data = await response.json();
+   console.log('Fetched user:', data.login);
 
   return data;
 }
